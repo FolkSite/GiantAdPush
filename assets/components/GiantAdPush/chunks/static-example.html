@@ -1,0 +1,97 @@
+<!doctype html>
+<head lang="en-us">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Giant Ad Push</title>
+	<style>
+		body{padding: 0; margin: 0;}
+		p{font-size: 20px; line-height: 30px; padding-bottom: 20px;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/giant-ad-push.css">
+
+</head>
+<body>
+
+<div id="mx--giant--ad">
+	
+	<div id="mx--giant--ad_inner">
+		
+		<h2>Sign up for our Newsletter</h2>
+		<form>
+			<input type="text" placeholder="name"><br>
+			<input type="text" placeholder="email">
+			<br>
+			<button>SIGN UP</button>
+		</form>	
+
+	</div> <!-- inner -->	
+	
+	<button id="mgxScroolBtn" onclick="mxgScrollDown()">&#9660;</button>
+</div><!-- mx-giant-ad -->
+<section>
+<p>Bacon ipsum dolor amet sausage turkey pastrami pig landjaeger, shank leberkas. Flank pig pastrami pancetta tail. Chicken filet mignon brisket beef ribs tri-tip, short loin t-bone frankfurter beef shank pork kevin fatback jowl prosciutto. Kielbasa brisket chicken, bresaola meatball kevin jowl. Bacon cow pork loin, hamburger bresaola tenderloin swine beef ribs jerky fatback venison. Ham hock boudin swine, meatloaf leberkas sirloin turkey bacon picanha. Leberkas salami doner fatback shank.
+</p>
+<p>
+Picanha turducken kevin swine, kielbasa jerky turkey meatloaf fatback t-bone tenderloin flank. Drumstick swine ball tip turkey pig ham hock ham alcatra tongue short ribs sirloin flank. Salami rump strip steak shoulder biltong jerky. Meatloaf capicola fatback tongue kevin.
+</p>
+<p>
+Pork picanha t-bone, strip steak bresaola andouille pork loin meatball hamburger alcatra bacon. Ham hock frankfurter alcatra turkey chicken, cow pork shoulder strip steak. Ball tip prosciutto swine shank sirloin venison landjaeger beef bresaola. Ham hock pastrami bresaola cupim spare ribs, cow pork chop ribeye tail leberkas meatloaf. Doner alcatra frankfurter kielbasa short loin andouille kevin rump. Chicken jowl ham swine jerky turducken tail. Fatback ribeye short loin tongue alcatra turducken shoulder biltong shank pork loin meatloaf rump sirloin beef.
+</p>
+<p>
+Shankle landjaeger boudin tenderloin, sausage pork belly porchetta jerky corned beef pig doner tail. Spare ribs landjaeger biltong cupim, meatball jowl capicola drumstick prosciutto filet mignon. Turducken short loin pork loin, cow rump pastrami strip steak jowl kevin swine sausage prosciutto. Ball tip ground round ham hock shankle kevin, bresaola pancetta meatball boudin.
+</p>
+<p>
+Filet mignon chicken pork chop, ham hock cow short loin bacon andouille flank pork loin kielbasa beef ribs meatball kevin. Jowl turkey filet mignon brisket. Turducken brisket sausage, picanha chuck kevin tri-tip. Rump cupim corned beef, ribeye strip steak pork belly ham doner. Prosciutto strip steak rump corned beef sirloin tail salami pancetta tongue turkey ham hock. Jerky bacon filet mignon, chicken tail salami brisket frankfurter. Beef sausage capicola shoulder tri-tip, tenderloin biltong flank filet mignon cupim chicken pork belly pork brisket pastrami.
+</p>
+<p>
+Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!
+</p>
+<p>Bacon ipsum dolor amet sausage turkey pastrami pig landjaeger, shank leberkas. Flank pig pastrami pancetta tail. Chicken filet mignon brisket beef ribs tri-tip, short loin t-bone frankfurter beef shank pork kevin fatback jowl prosciutto. Kielbasa brisket chicken, bresaola meatball kevin jowl. Bacon cow pork loin, hamburger bresaola tenderloin swine beef ribs jerky fatback venison. Ham hock boudin swine, meatloaf leberkas sirloin turkey bacon picanha. Leberkas salami doner fatback shank.
+</p>
+<p>
+Pork picanha t-bone, strip steak bresaola andouille pork loin meatball hamburger alcatra bacon. Ham hock frankfurter alcatra turkey chicken, cow pork shoulder strip steak. Ball tip prosciutto swine shank sirloin venison landjaeger beef bresaola. Ham hock pastrami bresaola cupim spare ribs, cow pork chop ribeye tail leberkas meatloaf. Doner alcatra frankfurter kielbasa short loin andouille kevin rump. Chicken jowl ham swine jerky turducken tail. Fatback ribeye short loin tongue alcatra turducken shoulder biltong shank pork loin meatloaf rump sirloin beef.
+</p>
+</section>
+
+<script type="text/javascript">
+
+//rules
+//1. content of page must longer than the window
+
+//modx passed variables
+var mxgBuffer = 1500;
+	
+function mxGiantAd(){
+	var mxgElement = document.getElementById("mx--giant--ad");
+	if(mxgElement){
+		//use outerHeight to make sure  we cover all content 
+		mxgHeight = window.outerHeight;
+		mxgElement.style.height = mxgHeight+"px";
+		//set display on now so we dont get a content flash
+		mxgElement.style.display = "block";
+	}	
+}
+
+function mxgScrollDown(){
+	document.body.scrollTop = document.getElementById("mx--giant--ad").offsetHeight;
+}
+
+//kill it if you scroll past it
+window.onscroll = function(){  
+	var mxgElement = document.getElementById("mx--giant--ad");
+	if(mxgElement){
+		if(window.pageYOffset > mxgElement.offsetHeight){
+			mxgElement.remove();
+		}
+	}	
+};
+
+//set buffer
+setTimeout(function(){ mxGiantAd(); }, mxgBuffer);
+
+//keep it full height
+window.onresize = function(){ mxGiantAd(); };
+	
+</script>
+</body>
+</html
