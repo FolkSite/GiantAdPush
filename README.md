@@ -52,9 +52,10 @@ This extra will allow you to:
 
 1. Create a new *"Category"* if you want
 2. Select a name for the TV *"mxg-ad"*
-3. Input Type should be *"Listbox (Single-Select)"*
-4. Input Option Values = `@SELECT pagetitle, id FROM modx_site_content WHERE parent=XX` <- replace XX with the Parent ID of the ads
-5. Assign your template.
+3. Input Type should be *"Resource List"*
+4. "Parents" gets the Parent ID of the ads
+5. Include Parents = No
+6. Assign your template
 
 ![tv](giant-tv.jpeg)
 
