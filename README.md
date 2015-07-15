@@ -60,7 +60,7 @@ This extra will allow you to:
 ![tv](giant-tv.jpeg)
 
 
-##Create Giant Add Chunk "mxg-ad-content"
+##Create Giant Ad Chunk "mxg-ad-content"
 
 1. Use the file *"mxg_wrapper.html"* to create your chunk
 
@@ -81,6 +81,6 @@ If you added the Javascript to your framework and it loads in the footer your do
 
 Otherwise add this call to your template footer
 
-```[[*mxg-ad:notempty=`[[$mgx-ad-js]]`]]```
+```[[*mxg-ad:notempty=`[[$mxg-ad-js]]`]]```
 
-and Create a new JS chunk "mgx-ad-js"
+and Create a new JS chunk "mxg-ad-js"
