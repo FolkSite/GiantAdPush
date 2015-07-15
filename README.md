@@ -9,7 +9,7 @@ This extra will allow you to:
 2. Display the ad or message fullscreen above your page content without invasive JS
 3. Scroll down or click the down arrow to remove the ad permanently from the DOM.
 
-[Demo](demo-page.jpeg)
+![Demo](demo-page.jpeg)
 
 - See it in action - http://flatso.clients.modxcloud.com/surf-city/
 
@@ -36,7 +36,7 @@ This extra will allow you to:
 1. Create either a Collection or a Resource Folder for all your ads. (published but hidden and no template needed)
 2. Create a Resource for your ad. Recommend turning off rich text editor if you are pasting in 3rd party scripts.
 
-[Collection](giant-collection.jpeg)
+![Collection](giant-collection.jpeg)
 
 ```
 <h2>Sign up for our Newsletter</h2>
@@ -56,7 +56,7 @@ This extra will allow you to:
 4. Input Option Values = `@SELECT pagetitle, id FROM modx_site_content WHERE parent=XX` <- replace XX with the Parent ID of the ads
 5. Assign your template.
 
-[tv](giant-tv.jpeg)
+![tv](giant-tv.jpeg)
 
 
 ##Create Giant Add Chunk "mxg-ad-content"
