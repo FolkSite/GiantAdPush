@@ -59,6 +59,8 @@ This extra will allow you to:
 
 ![tv](giant-tv.jpeg)
 
+![select](giant-select.jpeg)
+
 
 ##Create Giant Ad Chunk "mxg-ad-content"
 
