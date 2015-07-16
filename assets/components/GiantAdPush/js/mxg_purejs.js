@@ -16,8 +16,13 @@ function mxGiantAd(){
 }
 
 function mxgScrollDown(){
+    //firefox + quirks
+    (document.documentElement || document.body.parentNode || document.body).scrollTop = document.getElementById("mx--giant--ad").offsetHeight;
+	//webkit
 	document.body.scrollTop = document.getElementById("mx--giant--ad").offsetHeight;
 }
+var mgxBtn = document.getElementById("mgxScroolBtn");
+mgxBtn.addEventListener('click',mxgScrollDown,false);
 
 //kill it if you scroll past it
 window.onscroll = function(){  
