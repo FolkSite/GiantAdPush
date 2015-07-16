@@ -70,7 +70,8 @@ This extra will allow you to:
 1. After `<body>` add:
 
 ```
-[[*mxg-ad:notempty=`[[getResources? &resources=`[[*mxg-ad]]` &tpl=`mxg-ad-content` &includeContent=`1` &limit=`1`]]`]]
+[[[[*mxg-ad:is=``:then=`-`:else=``]]getResources? &resources=`[[*mxg-ad]]` &tpl=`mxg-ad-content` &includeContent=`1` &limit=`1`]]
+
 ```
 
 ----
