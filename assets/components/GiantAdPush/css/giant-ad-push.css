@@ -18,7 +18,6 @@
 #mgxScroolBtn{
 	position: absolute;
 	bottom: 10%;
-	margin: 0 auto;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -29,7 +28,11 @@
 	font-size: 20px;
 	line-height: 50px;
 	cursor: pointer;
+	left: 50%;
+	transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
 }
 */	
 	
-#mx--giant--ad{overflow:hidden;display:none;width:100%;background-color:#e7e7e7;text-align:center}#mx--giant--ad_inner{position:relative;top:30%;transform:translateY(-40%);-moz-transform:translateY(-40%);-webkit-transform:translateY(-40%)}#mgxScroolBtn{position:absolute;bottom:10%;margin:0 auto;width:50px;height:50px;border-radius:50%;background-color:#95c97c;color:#FFF;text-align:center;border:none;font-size:20px;line-height:50px;cursor:pointer}
+#mx--giant--ad{overflow:hidden;display:none;width:100%;background-color:#e7e7e7;text-align:center}#mx--giant--ad_inner{position:relative;top:30%;transform:translateY(-40%);-moz-transform:translateY(-40%);-webkit-transform:translateY(-40%)}#mgxScroolBtn{position:absolute;bottom:10%;width:50px;height:50px;border-radius:50%;background-color:#95c97c;color:#FFF;text-align:center;border:none;font-size:20px;line-height:50px;cursor:pointer;left:50%;transform:translateX(-50%);-moz-transform:translateX(-50%);-webkit-transform:translateX(-50%)}
