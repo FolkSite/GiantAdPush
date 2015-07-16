@@ -8,6 +8,7 @@ This extra will allow you to:
 1. Choose from a number of self-created ads
 2. Display the ad or message fullscreen above your page content without invasive JS
 3. Scroll down or click the down arrow to remove the ad permanently from the DOM.
+4. Set the wait buffer you want in the JS
 
 ![Demo](demo-page.jpeg)
 
