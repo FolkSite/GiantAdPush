@@ -28,6 +28,7 @@
 	
 	<button id="mgxScroolBtn">&#9660;</button>
 </div><!-- mx-giant-ad -->
+
 <section>
 <p>Bacon ipsum dolor amet sausage turkey pastrami pig landjaeger, shank leberkas. Flank pig pastrami pancetta tail. Chicken filet mignon brisket beef ribs tri-tip, short loin t-bone frankfurter beef shank pork kevin fatback jowl prosciutto. Kielbasa brisket chicken, bresaola meatball kevin jowl. Bacon cow pork loin, hamburger bresaola tenderloin swine beef ribs jerky fatback venison. Ham hock boudin swine, meatloaf leberkas sirloin turkey bacon picanha. Leberkas salami doner fatback shank.
 </p>
@@ -53,8 +54,10 @@ Pork picanha t-bone, strip steak bresaola andouille pork loin meatball hamburger
 </p>
 </section>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
 
+$("#mgxScroolBtn").hide();
 //rules
 //1. content of page must longer than the window
 
@@ -62,36 +65,42 @@ Pork picanha t-bone, strip steak bresaola andouille pork loin meatball hamburger
 var mxgBuffer = 1500;
 	
 function mxGiantAd(){
-	var mxgElement = document.getElementById("mx--giant--ad");
-	if(mxgElement){
+	var mxgElement = $("#mx--giant--ad");
+	if(mxgElement.length > 0){
 		//use outerHeight to make sure  we cover all content 
 		mxgHeight = window.outerHeight;
-		mxgElement.style.height = mxgHeight+"px";
+		mxgElement.css("height", mxgHeight+"px");
 		//set display on now so we dont get a content flash
-		mxgElement.style.display = "block";
+		mxgElement.slideToggle("slow");
+		//make a double fade effect
+		$("#mgxScroolBtn").delay(500).fadeIn("slow");
 	}	
 }
 
-function mxgScrollDown(){
-	document.body.scrollTop = document.getElementById("mx--giant--ad").offsetHeight;
-}
+$(document).ready( function(){
+	//set buffer
+	setTimeout(function(){ mxGiantAd(); }, mxgBuffer);
+	
+	$("#mgxScroolBtn").on("click", function(){
+		var scrolllength = $("#mx--giant--ad").height();
+		$("body").animate({scrollTop: scrolllength},'slow');
+	});
+
+});
+
+//keep it full height
+$(document).resize( function(){  mxGiantAd(); });
 
 //kill it if you scroll past it
-window.onscroll = function(){  
-	var mxgElement = document.getElementById("mx--giant--ad");
-	if(mxgElement){
-		if(window.pageYOffset > mxgElement.offsetHeight){
+$(window).scroll( function(){
+	var mxgElement = $("#mx--giant--ad");
+	if(mxgElement.length > 0){
+		if(window.pageYOffset > mxgElement.height()){
 			mxgElement.remove();
 		}
 	}	
-};
-
-//set buffer
-setTimeout(function(){ mxGiantAd(); }, mxgBuffer);
-
-//keep it full height
-window.onresize = function(){ mxGiantAd(); };
-	
+});	
+		
 </script>
 </body>
 </html

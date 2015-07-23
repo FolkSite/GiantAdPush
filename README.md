@@ -26,7 +26,7 @@ This extra will allow you to:
 
 ##Roadmap
 
-- Add Fancy jQuery version
+- Add Fancy jQuery version [DONE]
 - Add Pre-packaged FormIt ready Forms
 
 
